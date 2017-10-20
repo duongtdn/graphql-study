@@ -1,7 +1,7 @@
 "use strict"
 
 import React, { Component } from 'react'
-import { GC_USER_ID, GC_AUTH_TOKEN } from 'constants'
+import { GC_USER_ID, GC_AUTH_TOKEN } from './constants'
 
 import { graphql, gql, compose } from 'react-apollo'
 
