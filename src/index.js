@@ -25,11 +25,18 @@ class App extends Component {
   }
   render() {
     return (
-      <ApolloProvider client = {client} >
+      <div >
         <CreateLink />
-      </ApolloProvider>
+        <LinkList />
+      </div>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(
+  <ApolloProvider client = {client} >
+    <App />
+  </ApolloProvider>  
+  , 
+  document.getElementById('root')
+);
