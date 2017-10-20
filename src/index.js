@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
 
 import { ApolloProvider, createNetworkInterface, ApolloClient } from 'react-apollo'
 
@@ -68,6 +68,8 @@ class App extends Component {
           <Route exact path='/' component={LinkList}/>
           <Route exact path='/create' component={CreateLink}/>
           <Route exact path='/login' component={Login}/>
+          <Route exact path='/top' component={LinkList} />
+          <Route exact path='/new/:page' component={LinkList} />          
         </Switch>
         </div>
       </div>
